@@ -8,18 +8,18 @@
 	<div class="menu">
 	<ul>
 		<li><a href="#">ASSIGNED TASK</a></li>
-		<li><a href="form.html">NEW TAKE</a></li>
+		<li><a href="form_task.php">NEW TASK</a></li>
 		<li><a href="#">TASK PROGRESS
            <ul>
-              <li><a href="#">Team Leader</a></li>
-              <li><a href="#">Senior</a></li>
-              <li><a href="#">Junior</a></li>
+              <li><a href="senior.php">Senior</a></li>
+              <li><a href="junior.php">Junior</a></li>
                  </ul>
            	  </li>
 		</a></li>
-    <li><a href="index.html">TO DO</a></li>
-		<li><a href="#">LOG OUT</a></li>
+    <li><a href="to_do.php">TO DO</a></li>
+		<li><a href="login.php">LOG OUT</a></li>
 	</ul>
     </div>
 </body>
 </html>
+<?php

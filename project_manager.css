@@ -6,6 +6,7 @@
 body
 {
 background-size: cover;
+
 }
 .menu
 {
@@ -15,8 +16,8 @@ background-size: cover;
 .menu ul
 {
 	padding: 0;
-	margin-right : 30px;
-	display : inline-flex;
+	margin-right: 30px;
+	display: inline-flex;
 }
 .menu ul li
 {
