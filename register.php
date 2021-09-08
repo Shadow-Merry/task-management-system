@@ -11,7 +11,7 @@ session_start();
 function passcheck() {
   let x = document.forms["form"]["pass"].value;
   let y = document.forms["form"]["passc"].value;
-  if (y != x) {
+  if (x != y) {
     alert("The password's are not same !!!");
     return false;
   }
