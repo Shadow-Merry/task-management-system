@@ -6,7 +6,7 @@ session_start();
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Atcom</title>
+	<title>Senior page</title>
 	<link rel="stylesheet" type="text/css" href="senior.css">
 </head>
 <body>
