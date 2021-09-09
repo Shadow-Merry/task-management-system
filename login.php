@@ -7,7 +7,13 @@ session_start();
 <head>
 	<title>login page</title>
     <link rel="stylesheet" type="text/css" href="login.css">
-    
+    <script>
+    history.pushState(null, null, null);
+    window.addEventListener('popstate', function () {
+        history.pushState(null, null, null);
+    });
+</script>
+
 </head>
 <body>
   
@@ -16,7 +22,7 @@ session_start();
             <input type="text" name="uname" placeholder="Username" autocomplete="off" required>
             <input type="password" name="pass" placeholder="Password" required>
             <input type="submit" name="login" value="Login">
-            <P class="login-register-text">Don't have password? <a href="regster.php">Register here </P>
+            <P class="login-register-text">Don't have password? <a href="register.php">Register here </P>
         </form>
 </body>
 </html>

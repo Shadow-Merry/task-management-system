@@ -12,10 +12,9 @@
 		<li><a href="form.html">NEW TAKE</a></li>
 		<li><a href="#">TASK PROGRESS
            <ul>
-           	  <li><a href="#">DEPARTMENT</a></li>
            	  <li><a href="#">TASK</a></li>
            	  <li><a href="#">NAME</a></li>
-           	  <li><a href="#">POSSITION</a>
+           	  <li><a href="#">POSITION</a>
                  <ul>
                  	<li><a href="#">Team Leader</a></li>
                  	<li><a href="#">Senior</a></li>

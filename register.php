@@ -38,7 +38,7 @@ function passcheck() {
             Password:<input type="password" name="pass" placeholder="password" required><br>
             Comfirm Password:<input type="password" name="passc" placeholder="Comfirm password" required><br>
             <input type="submit" name="login" value="Login">
-            <input type="submit" name="" value="Cancle">
+            <input type="submit" name="" onclick="javascript:history.back()" value="Cancle">
             </form>
 </body>
 </html>
