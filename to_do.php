@@ -1,33 +1,30 @@
 <!DOCTYPE html>
-<html>
+<!-- Created By CodingNepal - www.codingnepalweb.com -->
+<html lang="en">
 <head>
-	<title>Add Task</title>
-	<link rel="stylesheet" type="text/css" href="form.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo App JavaScript | CodingNepal</title>
+    <link rel="stylesheet" href="to_do.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
 </head>
 <body>
-     <form class="box">
-     	<h1>@COM</h1>
-     	TASK NAME:<input type="text" name=""></br>
-        ASSIGNED TO: <select id="team" name="team">
-            <option value="leader">Team Leader</option>
-            <option value="Senior">Senior System Developer</option>
-            <option value="Junior">Junior Sytem Developer</option>
-        </select></br>
+  <div class="wrapper">
+    <header>Todo App</header>
+    <div class="inputField">
+      <input type="text" placeholder="Add your new todo">
+      <button><i class="fas fa-plus"></i></button>
+    </div>
+    <ul class="todoList">
+      <!-- data are comes from local storage -->
+    </ul>
+    <div class="footer">
+      <span>You have <span class="pendingTasks"></span> pending tasks</span>
+      <button>Clear All</button>
+    </div>
+  </div>
 
-        START DATE:<input type="Date" name="task start Date"></br>
-        END DATE:<input type="Date" name="task end Date"></br>
-        PRIORITY: <select id="team" name="team">
-            <option value="High">High</option>
-            <option value="mid">Medium</option>
-            <option value="lowr">Low</option>
-        </select></br>
+  <script src="to_do.js"></script>
 
-       DISCRIPTION OF THE TASK:</br><textarea name="message" rows="10" cols="40"></textarea></br>
-
-       ATTACH FILE:<input type="FILE" name="attach"></br>
-
-       <input type="submit" name="">
-     </form>
-    
 </body>
 </html>
