@@ -1,0 +1,65 @@
+.heading{
+	width: 50%;
+	margin: 30px auto;
+	text-align: center;
+	color: 	#02020a;
+	/*background: #f0f0f0; */
+	border: 2px solid #8de7e7; 
+	border-radius: 20px;
+}
+body{
+    width: 100%;
+    height: 100vh;
+    /* overflow: hidden; */
+    padding: 10px;
+    background: linear-gradient(to bottom, #68EACC 0%, #497BE8 100%);
+  }
+form {
+	width: 50%; 
+	margin: 30px auto; 
+	border-radius: 5px; 
+	padding: 10px;
+	/*background: #FFF8DC; */
+	border: 1px solid #8de7e7; 
+}
+form p {
+	color: red;
+	margin: 0px;
+}
+.task_input {
+	width: 75%;
+	height: 15px; 
+	padding: 10px;
+	border: 2px solid #8de7e7; 
+}
+.add_btn {
+	height: 39px;
+	background: #8de7e7;
+	color: 	#02020a;
+	border: 2px solid #8de7e7; 
+	border-radius: 5px; 
+	padding: 5px 20px;
+}
+
+table {
+    width: 50%;
+    margin: 30px auto;
+    border-collapse: collapse;
+}
+
+tr {
+	border-bottom: 1px solid #8de7e7;
+}
+
+th {
+	font-size: 19px;
+	color: #121616;
+}
+
+tr:hover {
+	background: #E9E9E9;
+}
+
+.task {
+	text-align: left;
+}

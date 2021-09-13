@@ -2,36 +2,26 @@
 // Start the session
 session_start();
 ?>
+
 <!DOCTYPE html>
 <html>
 <head>
-	<title>TEAM LEADER</title>
-	<link rel="stylesheet" type="text/css" href="team leader.css">
+	<title>JUNIOR HOME PAGE</title>
+    <link rel="stylesheet" type="text/css" href="junior.css">
 </head>
 <body>
 	<div class="menu">
 	<ul>
 		<li><a href="#">ASSIGNED TASK</a></li>
-		<li><a href="form_task_team.php">NEW TASK</a></li>
-		<li><a href="#">TASK PROGRESS
-           <ul>
-              <li><a href="#">Senior</a></li>
-              <li><a href="#">Junior</a></li>
-                 </ul>
-           	  </li>
-		</a></li>
-    <li><a href="to_do.php">TO DO</a></li>
+        <li><a href="to_do.php">TO DO</a></li>
 		<li><a href="login.php">LOG OUT</a></li>
 	</ul>
     </div>
-</br>
-</br></br></br></br></br></br>
-    
+</br></br></br></br></br></br></br></br></br>
 <?php
  include 'connection.php';
  $uname = $_SESSION['uname'];
-
- $sql = "select * from tasks where assigned_to ='$uname'";
+ $sql = "select * from tasks where assigned_to in (select fname from users where uname ='$uname')";
 $result = mysqli_query($conn,$sql);
 if($result){
 echo "<table>
@@ -44,14 +34,15 @@ echo "<table>
     		<th>DESCRRIPTION</th>
     		<th>ATTACHED FILE</th>
             <th>ASSIGNED BY </th>";
-
+$i=0;
 while($row = mysqli_fetch_array($result))
 
   {
+  
   echo "<tr>";
-
-  echo "<td>" . $row['id'] . "</td>";
-
+  $i+=1;
+ 
+  echo "<td> $i </td>";
   echo "<td>" . $row['task_name'] . "</td>";
 
   echo "<td>" . $row['start_date'] . "</td>";
