@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Todo App JavaScript | CodingNepal</title>
     <link rel="stylesheet" href="to_do.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
 	<link rel="stylesheet" type="text/css" href="project_manager.css">
 </head>
 <body>

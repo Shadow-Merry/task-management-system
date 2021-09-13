@@ -11,12 +11,12 @@ session_start();
 <body>
 	<div class="menu">
 	<ul>
-		<li><a href="#">ASSIGNED TASK</a></li>
+		<li><a href="team_leader.php">ASSIGNED TASK</a></li>
 		<li><a href="form_task_team.php">NEW TASK</a></li>
 		<li><a href="#">TASK PROGRESS
            <ul>
-              <li><a href="#">Senior</a></li>
-              <li><a href="#">Junior</a></li>
+              <li><a href="senior_task.php">Senior</a></li>
+              <li><a href="junior_task.php">Junior</a></li>
                  </ul>
            	  </li>
 		</a></li>
@@ -25,13 +25,13 @@ session_start();
 	</ul>
     </div>
 </br>
-</br></br></br></br></br></br>
+</br></br>
     
 <?php
  include 'connection.php';
  $uname = $_SESSION['uname'];
 
- $sql = "select * from tasks where assigned_to ='$uname'";
+ $sql = "select * from tasks where assigned_to in (select fname from users where uname ='$uname')";
 $result = mysqli_query($conn,$sql);
 if($result){
 echo "<table>
@@ -45,12 +45,13 @@ echo "<table>
     		<th>ATTACHED FILE</th>
             <th>ASSIGNED BY </th>";
 
+$i=0;
 while($row = mysqli_fetch_array($result))
 
   {
   echo "<tr>";
-
-  echo "<td>" . $row['id'] . "</td>";
+$i+=1;
+  echo "<td> $i </td>";
 
   echo "<td>" . $row['task_name'] . "</td>";
 

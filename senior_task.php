@@ -1,31 +1,34 @@
-<?php
-// Start the session
-session_start();
-?>
-
-<!DOCTYPE html>
 <html>
-<head>
-	<title>Senior page</title>
-	<link rel="stylesheet" type="text/css" href="senior.css">
+    <head>
+        <title> List of senior task </title>
+        <style>
+table{
+width: 100%;
+margin-left: auto;
+margin-right: auto;
+}
+th{
+	background-color: #9fa8a3;
+}
+td{
+	background-color: #fff;
+}
+th, td{
+	text-align: left;
+	padding: 10px;
+}
+table, th, td{
+border: 1px solid #000;
+border-collapse: collapse;
+}
+</style>
 </head>
 <body>
-	<div class="menu">
-	<ul>
-		<li><a href="senior.php">ASSIGNED TASK</a></li>
-		<li><a href="form_task.php">NEW TASK</a></li>
-		<li><a href="junior_task.php">JUNIOR TASK PROGRESS</a></li>
-        <li><a href="to_do.php">TO DO</a></li>
-		<li><a href="login.php">LOG OUT</a></li>
-	</ul>
-    </div>
-    </br>
-</br>
-
-    <?php
+</body>
+</html>
+<?php
  include 'connection.php';
- $uname = $_SESSION['uname'];
- $sql = "select * from tasks where assigned_to in (select fname from users where uname ='$uname')";
+ $sql = "select * from tasks where assigned_to in (select fname from users where position = 'senior')";
 $result = mysqli_query($conn,$sql);
 if($result){
 echo "<table>
@@ -37,6 +40,7 @@ echo "<table>
     		<th>END DATE</th>
     		<th>DESCRRIPTION</th>
     		<th>ATTACHED FILE</th>
+            <th>ASSIGNED TO </th>
             <th>ASSIGNED BY </th>";
 $i=0;
 while($row = mysqli_fetch_array($result))
@@ -59,6 +63,8 @@ while($row = mysqli_fetch_array($result))
 
   echo "<td>" . $row['file'] . "</td>";
 
+  echo "<td>" . $row['assigned_to'] . "</td>";
+
   echo "<td>" . $row['assigned_by'] . "</td>";
 
   echo "</tr>";
@@ -71,6 +77,3 @@ else {
     echo " no task assigned to you yet";
 }
 ?>
-
-</body>
-</html>

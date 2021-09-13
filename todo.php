@@ -23,6 +23,14 @@
 <head>
 	<title>My TODO list</title>
 <link rel="stylesheet" type="text/css" href="todo.css">
+
+    <script>
+function check() {
+  document.getElementById("try").style.textDecoration = "line-through";
+}
+</script>
+
+
 </head>
 <body>
 	<div class="heading">
@@ -54,7 +62,7 @@ while($row = mysqli_fetch_array($result))
   $i+=1;
  
   echo "<td> $i </td>";
-  echo "<td>" . $row['task'] . "</td>";
+  echo "<td id ='try' onclick='check()'>" . $row['task'] . "</td>";
 
   echo "</tr>";
 
