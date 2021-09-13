@@ -62,7 +62,12 @@ while($row = mysqli_fetch_array($result))
  
   echo "<td> $i </td>";
   echo "<td id ='try' onclick='check()'>" . $row['task'] . "</td>";
-  
+ echo " <script>
+  function check() {
+    document.getElementById('try').style.textDecoration = 'line-through';
+  }
+  </script>
+  ";
 
   echo "</tr>";
 

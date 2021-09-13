@@ -55,11 +55,11 @@ $i+=1;
 
   echo "<td>" . $row['task_name'] . "</td>";
 
+  echo "<td>" . $row['priority'] . "</td>";
+
   echo "<td>" . $row['start_date'] . "</td>";
 
   echo "<td>" . $row['end_date'] . "</td>";
-
-  echo "<td>" . $row['priority'] . "</td>";
 
   echo "<td>" . $row['discription'] . "</td>";
 
