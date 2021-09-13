@@ -20,9 +20,9 @@
            	  <li><a href="#">NAME</a></li>
            	  <li><a href="#">POSITION</a>
                  <ul>
-                 	<li><a href="#">Team Leader</a></li>
-                 	<li><a href="#">Senior</a></li>
-                 	<li><a href="#">Junior</a></li>
+                 	<li><a href="">Team Leader</a></li>
+                 	<li><a href="senior_task.php">Senior</a></li>
+                 	<li><a href="junior_task.php">Junior</a></li>
                  </ul>
            	  </li>
            </ul>

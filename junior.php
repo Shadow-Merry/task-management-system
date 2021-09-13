@@ -33,7 +33,8 @@ echo "<table>
     		<th>END DATE</th>
     		<th>DESCRRIPTION</th>
     		<th>ATTACHED FILE</th>
-            <th>ASSIGNED BY </th>";
+            <th>ASSIGNED BY </th>
+			<th> STATUS </th>";
 $i=0;
 while($row = mysqli_fetch_array($result))
 
@@ -56,6 +57,8 @@ while($row = mysqli_fetch_array($result))
   echo "<td>" . $row['file'] . "</td>";
 
   echo "<td>" . $row['assigned_by'] . "</td>";
+
+  echo "<td>" . $row['status'] . "</td>";
 
   echo "</tr>";
 

@@ -17,7 +17,7 @@ session_start();
         include 'connection.php';
         $name = $_SESSION['uname'];
         echo $name;
-        $sql = "select fname from users where position!='project manager' and position!='team leader'";
+        $sql = "select fname from users where position='junior'";
         $list=mysqli_query($conn,$sql);
 
         $row = mysqli_num_rows($list);
