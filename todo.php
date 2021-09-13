@@ -57,12 +57,12 @@ $i=0;
 while($row = mysqli_fetch_array($result))
 
   {
-  
   echo "<tr>";
   $i+=1;
  
   echo "<td> $i </td>";
   echo "<td id ='try' onclick='check()'>" . $row['task'] . "</td>";
+  
 
   echo "</tr>";
 
