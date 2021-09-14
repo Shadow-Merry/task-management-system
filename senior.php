@@ -13,7 +13,7 @@ session_start();
 	<div class="menu">
 	<ul>
 		<li><a href="senior.php">ASSIGNED TASK</a></li>
-		<li><a href="form_task.php">NEW TASK</a></li>
+		<li><a href="form_task_senior.php">NEW TASK</a></li>
 		<li><a href="junior_task.php">JUNIOR TASK PROGRESS</a></li>
         <li><a href="to_do.php">TO DO</a></li>
 		<li><a href="login.php">LOG OUT</a></li>
@@ -37,7 +37,8 @@ echo "<table>
     		<th>END DATE</th>
     		<th>DESCRRIPTION</th>
     		<th>ATTACHED FILE</th>
-            <th>ASSIGNED BY </th>";
+            <th>ASSIGNED BY </th>
+            <th>STATUS</th>";
 $i=0;
 while($row = mysqli_fetch_array($result))
 
@@ -49,17 +50,19 @@ while($row = mysqli_fetch_array($result))
   echo "<td> $i </td>";
   echo "<td>" . $row['task_name'] . "</td>";
 
+  echo "<td>" . $row['priority'] . "</td>";
+
   echo "<td>" . $row['start_date'] . "</td>";
 
   echo "<td>" . $row['end_date'] . "</td>";
-
-  echo "<td>" . $row['priority'] . "</td>";
 
   echo "<td>" . $row['discription'] . "</td>";
 
   echo "<td>" . $row['file'] . "</td>";
 
   echo "<td>" . $row['assigned_by'] . "</td>";
+
+  echo "<td>" . $row['status'] . "</td>";
 
   echo "</tr>";
 

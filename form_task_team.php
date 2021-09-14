@@ -54,7 +54,7 @@ $end_date = $_POST['end_date'];
 $priority = $_POST['priority'];
 $dis = $_POST['discription'];
 $assigned_by = $_SESSION['uname'];
-$sql = " insert into tasks (task_name,assigned_to,start_date,end_date,priority,discription,assigned_by) values ('$task_name','$assigned_to','$start_date','$end_date','$priority','$dis','$assigned_by')";
+$sql = " insert into tasks (task_name,assigned_to,start_date,end_date,priority,discription,assigned_by,status) values ('$task_name','$assigned_to','$start_date','$end_date','$priority','$dis','$assigned_by','In-progress)";
 $result = mysqli_query($conn,$sql);
 }
 ?>

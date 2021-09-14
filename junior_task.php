@@ -41,7 +41,8 @@ echo "<table>
     		<th>DESCRRIPTION</th>
     		<th>ATTACHED FILE</th>
             <th>ASSIGNED TO </th>
-            <th>ASSIGNED BY </th>";
+            <th>ASSIGNED BY </th>
+            <th> STATUS </th>";
 $i=0;
 while($row = mysqli_fetch_array($result))
 
@@ -53,11 +54,11 @@ while($row = mysqli_fetch_array($result))
   echo "<td> $i </td>";
   echo "<td>" . $row['task_name'] . "</td>";
 
+  echo "<td>" . $row['priority'] . "</td>";
+
   echo "<td>" . $row['start_date'] . "</td>";
 
   echo "<td>" . $row['end_date'] . "</td>";
-
-  echo "<td>" . $row['priority'] . "</td>";
 
   echo "<td>" . $row['discription'] . "</td>";
 
@@ -66,6 +67,8 @@ while($row = mysqli_fetch_array($result))
   echo "<td>" . $row['assigned_to'] . "</td>";
 
   echo "<td>" . $row['assigned_by'] . "</td>";
+
+ echo "<td>" . $row['status'] . "</td>";
 
   echo "</tr>";
 

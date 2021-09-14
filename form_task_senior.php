@@ -17,7 +17,7 @@ session_start();
         include 'connection.php';
         $name = $_SESSION['uname'];
         echo $name;
-        $sql = "select fname from users where position not in (select position from users where uname='$name')";
+        $sql = "select fname from users where position='junior'";
         $list=mysqli_query($conn,$sql);
 
         $row = mysqli_num_rows($list);
@@ -54,7 +54,7 @@ $end_date = $_POST['end_date'];
 $priority = $_POST['priority'];
 $dis = $_POST['discription'];
 $assigned_by = $_SESSION['uname'];
-$sql = " insert into tasks (task_name,assigned_to,start_date,end_date,priority,discription,assigned_by,status) values ('$task_name','$assigned_to','$start_date','$end_date','$priority','$dis','$assigned_by','In-progess')";
+$sql = " insert into tasks (task_name,assigned_to,start_date,end_date,priority,discription,assigned_by,status) values ('$task_name','$assigned_to','$start_date','$end_date','$priority','$dis','$assigned_by','In-progress)";
 $result = mysqli_query($conn,$sql);
 }
 ?>
