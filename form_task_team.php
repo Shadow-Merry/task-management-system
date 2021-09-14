@@ -9,7 +9,7 @@ session_start();
 	<link rel="stylesheet" type="text/css" href="form_task.css">
 </head>
 <body>
-     <form class="box"  action="form_task.php" method="post" enctype="multipart/form-data" autocomplete="off">
+     <form class="box"  action="form_task_team.php" method="post" enctype="multipart/form-data" autocomplete="off">
      <h1>@COM</h1>	
      TASK NAME:<input type="text" name="tname" required></br>
         ASSIGNED TO: <select id="team" name="assigned_to">
