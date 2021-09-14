@@ -11,7 +11,7 @@ session_start();
 <body>
      <form class="box"  action="form_task.php" method="post" enctype="multipart/form-data" autocomplete="off">
      	<h1>@COM</h1>
-     	TASK NAME:<input type="text" name="tname"></br>
+     	TASK NAME:<input type="text" name="tname" required></br>
         ASSIGNED TO: <select id="team" name="assigned_to">
         <?php
         include 'connection.php';
@@ -27,8 +27,8 @@ session_start();
            
         ?>
         </select></br>
-        START DATE:<input type="Date" name="start_date"></br>
-        END DATE:<input type="Date" name="end_date"></br>
+        START DATE:<input type="Date" name="start_date" required></br>
+        END DATE:<input type="Date" name="end_date" required></br>
         PRIORITY: <select id="team" name="priority">
             <option value="High">High</option>
             <option value="mid">Medium</option>
