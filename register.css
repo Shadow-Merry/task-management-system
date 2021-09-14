@@ -14,7 +14,7 @@ body{
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
-    background-color: rgb(44,82,121) ;
+    background-color: rgb(112, 133, 155) ;
     /*background: transparent;*/
     text-align: center;
 }
