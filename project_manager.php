@@ -10,9 +10,7 @@
 </head>
 <body>
 	<div class="menu">
-	<div class="logo"><a href="#">@COM</a></div>
 	<ul>
-		<li><a href="#">HOME</a></li>
 		<li><a href="form_task.php">NEW TASK</a></li>
 		<li><a href="#">TASK PROGRESS
            <ul>

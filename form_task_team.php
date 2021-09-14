@@ -10,8 +10,8 @@ session_start();
 </head>
 <body>
      <form class="box"  action="form_task.php" method="post" enctype="multipart/form-data" autocomplete="off">
-     	<h1>@COM</h1>
-     	TASK NAME:<input type="text" name="tname"></br>
+     <h1>@COM</h1>	
+     TASK NAME:<input type="text" name="tname"></br>
         ASSIGNED TO: <select id="team" name="assigned_to">
         <?php
         include 'connection.php';
