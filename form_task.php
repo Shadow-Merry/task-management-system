@@ -17,12 +17,12 @@ session_start();
         include 'connection.php';
         $name = $_SESSION['uname'];
         echo $name;
-        $sql = "select fname from users where position not in (select position from users where uname='$name')";
+        $sql = "select fname,position from users where position not in (select position from users where uname='$name')";
         $list=mysqli_query($conn,$sql);
 
         $row = mysqli_num_rows($list);
          while ($row = mysqli_fetch_array($list)){
-         echo "<option value='". $row['fname'] ."'>" .$row['fname'] ."</option>" ;
+         echo "<option value='". $row['fname'] ."'>" .$row['position'] . " : ".$row['fname'] ."</option>" ;
        }
            
         ?>
