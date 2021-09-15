@@ -10,7 +10,7 @@
 </head>
 <body>
   <div class="wrapper">
-    <header>Todo App</header>
+    <header>Todo </header>
     <div class="inputField">
       <input type="text" placeholder="Add your new todo">
       <button><i class="fas fa-plus"></i></button>
